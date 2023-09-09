@@ -12,17 +12,21 @@ const argv = require("yargs/yargs")(process.argv.slice(2))
         type: "string",
         describe: "the name to say hello to",
       });
-    },
-    (argv) => {
-      console.log({ in: argv });
     }
+    // (argv) => {
+    //   console.log({ in: argv });
+    // }
   )
   .option({
     name: {
       alias: "n",
-      describe: "hello [name]",
+      describe: "--name [name]",
+    },
+    age: {
+      alias: "g",
+      describe: "--age [age]",
     },
   })
   .help().argv;
 
-console.log({ out: argv });
+console.log(`hello ${argv.name}`);
