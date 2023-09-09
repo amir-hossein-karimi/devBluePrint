@@ -15,10 +15,16 @@
     "folder",
     "sculptor"
   ],
+  "bin": {
+    "devsculptor": "./bin/index.js"
+  },
   "author": "amir-hossein-karimi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amir-hossein-karimi/devSculptor/issues"
   },
-  "homepage": "https://github.com/amir-hossein-karimi/devSculptor#readme"
+  "homepage": "https://github.com/amir-hossein-karimi/devSculptor#readme",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
 }
