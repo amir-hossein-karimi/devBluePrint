@@ -1,0 +1,24 @@
+{
+  "name": "devsculptor",
+  "version": "1.0.0",
+  "description": "easy folder and structure creator",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amir-hossein-karimi/devSculptor.git"
+  },
+  "keywords": [
+    "creator",
+    "folder",
+    "sculptor"
+  ],
+  "author": "amir-hossein-karimi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amir-hossein-karimi/devSculptor/issues"
+  },
+  "homepage": "https://github.com/amir-hossein-karimi/devSculptor#readme"
+}
