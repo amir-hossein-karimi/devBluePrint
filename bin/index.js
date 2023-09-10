@@ -1,32 +1,19 @@
 #! /usr/bin/env node
 
-const argv = require("yargs/yargs")(process.argv.slice(2))
-  .scriptName("devsculptor")
-  .usage("devsculptor --name <name>") // usage here
-  //   .demandOption([])
-  .command(
-    "hello [name]",
-    "say hello",
-    (yargs) => {
-      yargs.positional("name", {
-        type: "string",
-        describe: "the name to say hello to",
-      });
-    }
-    // (argv) => {
-    //   console.log({ in: argv });
-    // }
-  )
-  .option({
-    name: {
-      alias: "n",
-      describe: "--name [name]",
-    },
-    age: {
-      alias: "g",
-      describe: "--age [age]",
-    },
-  })
-  .help().argv;
+import inquirer from "inquirer";
 
-console.log(`hello ${argv.name}`);
+inquirer
+  .prompt([
+    {
+      type: "list",
+      name: "my list",
+      message: "select from list",
+      choices: ["react", "vue", "angular", "jquery", "svelte"],
+    },
+  ])
+  .then((answers) => {
+    console.log(answers);
+  })
+  .catch((error) => {
+    console.log("has error", error);
+  });
