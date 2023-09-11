@@ -20,7 +20,7 @@
             ]
           }
         ],
-        "useStyles": [
+        "useStyles.js": [
           {
             "name": "type",
             "type": "select",
@@ -55,7 +55,7 @@
             "default": "default header text"
           }
         ],
-        "useStyles": [
+        "useStyles.js": [
           {
             "name": "changeBackgroundColor",
             "type": "input",
