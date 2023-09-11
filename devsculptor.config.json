@@ -1,5 +1,37 @@
 {
-  "react": {},
-  "webStatic": {},
-  "expressServer": {}
+  "basePath": "sculptors",
+  "react": {
+    "components": {
+      "component1": {
+        "index.jsx": [
+          {
+            "name": "ComponentName",
+            "type": "input",
+            "required": true
+          },
+          {
+            "name": "logEntry",
+            "type": "select",
+            "options": [
+              "selectedEntry1",
+              "selectedEntry2",
+              "selectedEntry3",
+              "selectedEntry4"
+            ]
+          }
+        ],
+        "useStyles": [
+          {
+            "name": "type",
+            "type": "select",
+            "options": ["primary", "secondary"]
+          }
+        ]
+      }
+    },
+    "pages": {
+      "Example1": {}
+    }
+  },
+  "webStatic": {}
 }
