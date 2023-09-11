@@ -30,7 +30,40 @@
       }
     },
     "pages": {
-      "Example1": {}
+      "page1": {
+        "index.jsx": [
+          {
+            "name": "PageName",
+            "type": "input",
+            "required": true
+          },
+          {
+            "name": "customPropsName",
+            "tpye": "select",
+            "options": [
+              "props1",
+              "props2",
+              "props3",
+              "props4",
+              "props5",
+              "props6"
+            ]
+          },
+          {
+            "name": "headerText",
+            "type": "input",
+            "default": "default header text"
+          }
+        ],
+        "useStyles": [
+          {
+            "name": "changeBackgroundColor",
+            "type": "input",
+            "required": true
+          }
+        ]
+      },
+      "page2": {}
     }
   },
   "webStatic": {}
