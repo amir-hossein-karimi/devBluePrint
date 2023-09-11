@@ -1,11 +1,20 @@
 #! /usr/bin/env node
 
-import inquirer from "inquirer";
+// import inquirer from "inquirer";
 import getFiles from "../lib/fileReader.js";
+import fileFinder from "../lib/fileFinder.js";
 
 const __dirname = process.cwd();
 
-console.log(getFiles(__dirname, []));
+const fileNameToSearch = "devsculptor.config.json";
+
+fileFinder({
+  dirPath: __dirname,
+  fileNameToSearch,
+  callBack: (filePath) => {
+    console.log(filePath);
+  },
+});
 
 // inquirer
 //   .prompt([
