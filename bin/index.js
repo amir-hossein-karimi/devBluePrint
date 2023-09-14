@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 // import inquirer from "inquirer";
-import fileFinder from "../lib/fileFinder.js";
+import { fileFinder } from "../lib/file.js";
 
 const __dirname = process.cwd();
 
