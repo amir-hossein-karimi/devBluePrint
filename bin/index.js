@@ -2,6 +2,7 @@
 
 // import inquirer from "inquirer";
 import { fileFinder } from "../lib/file.js";
+import path from "path";
 
 const __dirname = process.cwd();
 
@@ -10,8 +11,15 @@ const fileNameToSearch = "devsculptor.config.json";
 fileFinder({
   fileNameToSearch,
 })
-  .then((res) => {
-    console.log(res);
+  .then(({ content, path: filePath }) => {
+    const mappingData = { ...content };
+    delete mappingData.basePath;
+    const sculptorExamplesPath = path.join(
+      path.dirname(filePath),
+      content.basePath
+    );
+
+    console.log({ sculptorExamplesPath, mappingData });
   })
   .catch((e) => {
     console.log(e);
