@@ -8,19 +8,21 @@ const __dirname = process.cwd();
 
 const fileNameToSearch = "devsculptor.config.json";
 
+const handleFileConfig = ({ content, path: filePath }) => {
+  const mappingData = { ...content };
+  delete mappingData.basePath;
+  const sculptorExamplesPath = path.join(
+    path.dirname(filePath),
+    content.basePath
+  );
+
+  console.log({ sculptorExamplesPath, mappingData });
+};
+
 fileFinder({
   fileNameToSearch,
 })
-  .then(({ content, path: filePath }) => {
-    const mappingData = { ...content };
-    delete mappingData.basePath;
-    const sculptorExamplesPath = path.join(
-      path.dirname(filePath),
-      content.basePath
-    );
-
-    console.log({ sculptorExamplesPath, mappingData });
-  })
+  .then(handleFileConfig)
   .catch((e) => {
     console.log(e);
   });
